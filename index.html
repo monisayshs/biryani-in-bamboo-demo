@@ -131,6 +131,10 @@
   }
 
   /* Menu */
+  .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+  .dish.featured{padding:0;overflow:hidden}
+  .dish.featured img{width:100%;height:230px;object-fit:cover}
+  .dish.featured .dish-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px}
   .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .dish{
     background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
@@ -203,6 +207,7 @@
     .sig-grid{grid-template-columns:1fr;gap:26px}
     .sig-grid img{height:300px}
     .menu-grid{grid-template-columns:1fr}
+    .featured-grid{grid-template-columns:1fr}
     .steps-grid{grid-template-columns:1fr;gap:22px}
     .direct .band{grid-template-columns:1fr;padding:26px}
     section{padding:42px 0}
@@ -282,16 +287,33 @@
         <h2>Menu</h2>
         <p>Pasand chuno, WhatsApp par bhejo — order seedha kitchen tak jayega.</p>
       </div>
-      <div class="menu-grid">
-        <article class="dish">
-          <div class="dish-top">
-            <h3>Chicken Bamboo Dum Biryani</h3>
-            <span class="vegdot nonveg" title="Non-veg"></span>
+      <div class="featured-grid">
+        <article class="dish featured">
+          <img src="images/dish-chicken.jpg" alt="Chicken bamboo dum biryani ka bowl, upar chicken leg piece aur bhuna pyaaz" width="800" height="600" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chicken Bamboo Dum Biryani</h3>
+              <span class="vegdot nonveg" title="Non-veg"></span>
+            </div>
+            <p>Brand ka signature item — bamboo me dum paki chicken biryani, saath me raita aur mirchi ka salan.</p>
+            <span class="tag">Signature</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
           </div>
-          <p>Brand ka signature item — bamboo me dum paki chicken biryani, saath me raita aur mirchi ka salan.</p>
-          <span class="tag">Signature</span>
-          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
         </article>
+        <article class="dish featured">
+          <img src="images/dish-handi.jpg" alt="Mitti ki handi me biryani, saath me raita ki katori" width="800" height="600" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Family Bamboo Handi</h3>
+              <span class="vegdot nonveg" title="Non-veg"></span>
+            </div>
+            <p>3–4 logo ke liye badi handi — ghar ki daawat ho ya doston ki mehfil, ek handi kaafi hai.</p>
+            <span class="tag">Family pack</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Family%20Bamboo%20Handi%20order%20karni%20hai">Ye order karo →</a>
+          </div>
+        </article>
+      </div>
+      <div class="menu-grid">
         <article class="dish">
           <div class="dish-top">
             <h3>Mutton Bamboo Dum Biryani</h3>
@@ -327,15 +349,6 @@
           <p>Masala anda biryani — roz ke khane ke liye halki jeb, poora swaad.</p>
           <span class="tag plain">Roz wala khana</span>
           <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Egg%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
-        </article>
-        <article class="dish">
-          <div class="dish-top">
-            <h3>Family Bamboo Handi</h3>
-            <span class="vegdot nonveg" title="Non-veg"></span>
-          </div>
-          <p>3–4 logo ke liye badi handi — ghar ki daawat ho ya doston ki mehfil, ek handi kaafi hai.</p>
-          <span class="tag">Family pack</span>
-          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Family%20Bamboo%20Handi%20order%20karni%20hai">Ye order karo →</a>
         </article>
       </div>
       <p class="menu-note">Ye sample menu hai — asli items, prices aur offers aapke asal menu se update ho jayenge.</p>
