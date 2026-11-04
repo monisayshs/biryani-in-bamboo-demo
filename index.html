@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biryani in Bamboo — Swarn Nagri, Greater Noida | WhatsApp par direct order</title>
+<meta name="description" content="Biryani in Bamboo, Swarn Nagri, Greater Noida. Bamboo me dum paki biryani — bina kisi app ke, seedha WhatsApp par order karo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4E6;
+    --paper:#FFFDF7;
+    --ink:#212B1E;
+    --bamboo:#38612F;
+    --bamboo-deep:#274A21;
+    --leaf:#5C7A4E;
+    --saffron:#D97C1C;
+    --saffron-soft:#F6E3C2;
+    --line:#E4D9BE;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip}
+  body{
+    font-family:'Archivo',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(250,244,230,.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand-mark{
+    width:38px;height:38px;border-radius:50%;flex:none;
+    background:var(--bamboo);color:#FFF7E6;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-weight:700;font-size:19px;
+  }
+  .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1.1}
+  .brand-sub{font-size:11.5px;color:var(--leaf);font-weight:600;letter-spacing:.04em}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--bamboo);color:#FFF8EA;text-decoration:none;
+    font-weight:600;font-size:15.5px;
+    padding:12px 22px;border-radius:var(--radius);
+    border:2px solid var(--bamboo);
+    transition:background .15s ease,transform .15s ease;
+  }
+  .btn:hover{background:var(--bamboo-deep)}
+  .btn:active{transform:scale(.98)}
+  .btn.saffron{background:var(--saffron);border-color:var(--saffron);color:#2A1A05}
+  .btn.saffron:hover{background:#C56E14}
+  .btn.ghost{background:transparent;color:var(--bamboo-deep);border-color:var(--bamboo)}
+  .btn.ghost:hover{background:var(--saffron-soft)}
+  .btn.small{padding:9px 16px;font-size:14px}
+
+  /* Hero */
+  .hero{padding:44px 0 52px;position:relative}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 118px, rgba(56,97,47,.05) 118px 120px);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;position:relative}
+  .hero h1{
+    font-family:'Fraunces',serif;font-weight:700;
+    font-size:clamp(38px,5.4vw,60px);line-height:1.06;letter-spacing:-.01em;
+  }
+  .hero h1 .accent{color:var(--saffron)}
+  .hero p.lede{margin:18px 0 26px;font-size:18px;max-width:46ch;color:#3B4636}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-facts{
+    margin-top:30px;padding-top:20px;border-top:1px solid var(--line);
+    display:flex;gap:26px;flex-wrap:wrap;
+    font-size:14.5px;font-weight:600;color:#3B4636;
+  }
+  .hero-facts span b{color:var(--bamboo-deep)}
+  .hero-photo{position:relative}
+  .hero-photo .frame{
+    border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:14px 14px 0 var(--saffron-soft);
+  }
+  .hero-photo img{width:100%;height:520px;object-fit:cover}
+  .hero-stamp{
+    position:absolute;left:-14px;bottom:26px;
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    padding:10px 16px;font-size:14px;font-weight:600;
+    box-shadow:0 8px 24px rgba(33,43,30,.12);
+  }
+  .hero-stamp b{color:var(--saffron);font-size:17px}
+
+  /* Sections */
+  section{padding:56px 0}
+  .section-head{max-width:640px;margin-bottom:30px}
+  .section-head h2{
+    font-family:'Fraunces',serif;font-weight:700;
+    font-size:clamp(28px,3.6vw,38px);line-height:1.15;
+  }
+  .section-head p{margin-top:10px;color:#3B4636;font-size:16.5px}
+
+  /* Signature */
+  .signature{background:var(--bamboo-deep);color:#F3EDD8}
+  .sig-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center}
+  .sig-grid .frame{border-radius:var(--radius);overflow:hidden}
+  .sig-grid img{width:100%;height:420px;object-fit:cover}
+  .signature h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(28px,3.6vw,38px);line-height:1.15}
+  .signature p{margin-top:14px;font-size:16.5px;color:#E7DFC6;max-width:52ch}
+  .sig-points{margin-top:22px;display:grid;gap:12px}
+  .sig-points li{
+    list-style:none;display:flex;gap:12px;align-items:flex-start;
+    font-size:16px;font-weight:500;
+  }
+  .sig-points .dot{
+    width:24px;height:24px;border-radius:50%;flex:none;margin-top:1px;
+    background:var(--saffron);color:#2A1A05;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+  }
+
+  /* Menu */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .dish{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:8px;
+  }
+  .dish-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .dish h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;line-height:1.2}
+  .tag{
+    flex:none;font-size:11px;font-weight:700;letter-spacing:.05em;
+    padding:4px 9px;border-radius:999px;
+    background:var(--saffron-soft);color:#8A4E08;
+  }
+  .tag.plain{background:#E9EFE2;color:var(--bamboo-deep)}
+  .dish p{font-size:14.5px;color:#4A5544;flex:1}
+  .dish .order{
+    margin-top:6px;font-weight:700;font-size:14.5px;color:var(--bamboo);
+    text-decoration:none;display:inline-flex;gap:6px;align-items:center;
+  }
+  .dish .order:hover{color:var(--bamboo-deep);text-decoration:underline}
+  .vegdot{
+    width:15px;height:15px;border:1.6px solid #2E7D32;border-radius:3px;flex:none;
+    display:inline-flex;align-items:center;justify-content:center;margin-top:4px;
+  }
+  .vegdot::after{content:"";width:7px;height:7px;border-radius:50%;background:#2E7D32}
+  .vegdot.nonveg{border-color:#9C3B2E}
+  .vegdot.nonveg::after{background:#9C3B2E}
+  .menu-note{margin-top:18px;font-size:13.5px;color:#6B7563}
+
+  /* Steps */
+  .steps{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{padding:8px 4px}
+  .step .num{
+    font-family:'Fraunces',serif;font-size:40px;font-weight:700;color:var(--saffron);line-height:1;
+  }
+  .step h3{font-size:18px;font-weight:700;margin:10px 0 6px}
+  .step p{font-size:15px;color:#4A5544}
+
+  /* Direct order band */
+  .direct .band{
+    background:var(--saffron-soft);border:1px solid var(--line);border-radius:var(--radius);
+    padding:36px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+  }
+  .direct h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(26px,3.4vw,34px);line-height:1.18}
+  .direct p{margin-top:10px;font-size:16px;color:#4A3B22;max-width:52ch}
+  .direct .cta-box{text-align:left}
+  .direct .cta-box .btn{width:100%;justify-content:center;font-size:16.5px;padding:15px 22px}
+  .direct .cta-box small{display:block;margin-top:10px;font-size:13px;color:#6B5A36;text-align:center}
+
+  /* Footer */
+  footer{padding:38px 0 110px;border-top:1px solid var(--line)}
+  .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  footer .fname{font-family:'Fraunces',serif;font-weight:700;font-size:20px}
+  footer p{font-size:14px;color:#5A6650;margin-top:4px}
+  footer .credit{font-size:12.5px;color:#8A927D;margin-top:18px}
+
+  /* Mobile sticky order bar */
+  .sticky-bar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;
+    background:var(--paper);border-top:1px solid var(--line);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  }
+  .sticky-bar .btn{width:100%;justify-content:center}
+
+  @media (max-width:860px){
+    .hero{padding:30px 0 42px}
+    .hero-grid{grid-template-columns:1fr;gap:28px}
+    .hero-photo img{height:340px}
+    .hero-stamp{left:10px;bottom:12px}
+    .sig-grid{grid-template-columns:1fr;gap:26px}
+    .sig-grid img{height:300px}
+    .menu-grid{grid-template-columns:1fr}
+    .steps-grid{grid-template-columns:1fr;gap:22px}
+    .direct .band{grid-template-columns:1fr;padding:26px}
+    section{padding:42px 0}
+    .sticky-bar{display:block}
+    footer{padding-bottom:110px}
+    .header-in .btn{display:none}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="brand" href="#">
+      <span class="brand-mark">B</span>
+      <span>
+        <span class="brand-name">Biryani in Bamboo</span><br>
+        <span class="brand-sub">SWARN NAGRI · GREATER NOIDA</span>
+      </span>
+    </a>
+    <a class="btn small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">Order on WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Biryani cooked in <span class="accent">bamboo</span>, ordered directly.</h1>
+        <p class="lede">Swarn Nagri, Greater Noida se garam-garam delivery — bina kisi app ke, seedha WhatsApp par order karo.</p>
+        <div class="hero-actions">
+          <a class="btn saffron" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par order karo</a>
+          <a class="btn ghost" href="#menu">Menu dekho</a>
+        </div>
+        <div class="hero-facts">
+          <span><b>Swarn Nagri</b>, Greater Noida</span>
+          <span><b>Delivery</b> only</span>
+          <span>Swiggy par <b>4.1 rated</b></span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="frame">
+          <img src="images/biryani-hero.jpg" alt="Dum biryani ki handi, upar se hara dhaniya aur mirch" width="1400" height="1594">
+        </div>
+        <div class="hero-stamp">Bamboo dum · <b>seedha aapke ghar</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNATURE -->
+  <section class="signature">
+    <div class="wrap sig-grid">
+      <div class="frame">
+        <img src="images/biryani-pot.jpg" alt="Biryani ka bartan, dum ke baad khula hua" width="1400" height="2100" loading="lazy">
+      </div>
+      <div>
+        <h2>Bamboo me band, dum par paki hui</h2>
+        <p>Naam hi kahani hai — biryani bamboo ke andar band karke dum par pakti hai. Chawal alag-alag dana, masala andar tak, aur khushboo jo dabba khulte hi pehle aati hai.</p>
+        <ul class="sig-points">
+          <li><span class="dot">1</span> Lambe dane wala chawal, har bite me poora swaad</li>
+          <li><span class="dot">2</span> Gehre masale, dum ki gravy ke saath</li>
+          <li><span class="dot">3</span> Single se lekar family handi tak ke size</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Menu</h2>
+        <p>Pasand chuno, WhatsApp par bhejo — order seedha kitchen tak jayega.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Chicken Bamboo Dum Biryani</h3>
+            <span class="vegdot nonveg" title="Non-veg"></span>
+          </div>
+          <p>Brand ka signature item — bamboo me dum paki chicken biryani, saath me raita aur mirchi ka salan.</p>
+          <span class="tag">Signature</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Mutton Bamboo Dum Biryani</h3>
+            <span class="vegdot nonveg" title="Non-veg"></span>
+          </div>
+          <p>Naram mutton ke tukde, gehre masale aur dum ki khushboo — khaas mauqe ke liye khaas biryani.</p>
+          <span class="tag plain">Weekend special</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Mutton%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Veg Bamboo Dum Biryani</h3>
+            <span class="vegdot" title="Veg"></span>
+          </div>
+          <p>Mausam ki sabziyan aur paneer ke bina bhi poora dum wala swaad — halki, khushboodar, pet bhar.</p>
+          <span class="tag plain">Veg</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Paneer Bamboo Biryani</h3>
+            <span class="vegdot" title="Veg"></span>
+          </div>
+          <p>Malai paneer ke bade tukde, kesar wala chawal aur upar se bhuna pyaaz.</p>
+          <span class="tag plain">Veg</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Egg Bamboo Biryani</h3>
+            <span class="vegdot nonveg" title="Non-veg"></span>
+          </div>
+          <p>Masala anda biryani — roz ke khane ke liye halki jeb, poora swaad.</p>
+          <span class="tag plain">Roz wala khana</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Egg%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+        <article class="dish">
+          <div class="dish-top">
+            <h3>Family Bamboo Handi</h3>
+            <span class="vegdot nonveg" title="Non-veg"></span>
+          </div>
+          <p>3–4 logo ke liye badi handi — ghar ki daawat ho ya doston ki mehfil, ek handi kaafi hai.</p>
+          <span class="tag">Family pack</span>
+          <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Family%20Bamboo%20Handi%20order%20karni%20hai">Ye order karo →</a>
+        </article>
+      </div>
+      <p class="menu-note">Ye sample menu hai — asli items, prices aur offers aapke asal menu se update ho jayenge.</p>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Order karna itna seedha hai</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Menu se chuno</h3>
+          <p>Upar menu dekho aur apni biryani pasand karo — koi app download nahi, koi sign-up nahi.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>WhatsApp par bhejo</h3>
+          <p>Ek tap me order seedha restaurant ke WhatsApp par — address aur quantity wahi bata do.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Garam delivery</h3>
+          <p>Swarn Nagri aur aas-paas ke ilaakon me garam-garam biryani seedha aapke darwaze par.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT ORDER -->
+  <section class="direct">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>App ke bina order, matlab beech wala kharcha khatm</h2>
+          <p>Jab customer yahi se order karta hai, to baat seedha aap se hoti hai — na beech me koi app, na har order par kata hua hissa. Customer ko apna restaurant yaad rehta hai, aur margin poora aapka.</p>
+        </div>
+        <div class="cta-box">
+          <a class="btn" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">Abhi WhatsApp par order karo</a>
+          <small>Subah se raat tak · Delivery only</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="fname">Biryani in Bamboo</div>
+        <p>Swarn Nagri, Greater Noida · Delivery only</p>
+        <p>Trishala Foods Pvt. Ltd.</p>
+      </div>
+      <div>
+        <a class="btn ghost small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par baat karo</a>
+      </div>
+    </div>
+    <p class="credit">Food photos: Unsplash (sample). Ye ek demo page hai — order aur baaki jaankari WhatsApp par confirm hoti hai.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn saffron" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par order karo</a>
+</div>
+
+</body>
+</html>
