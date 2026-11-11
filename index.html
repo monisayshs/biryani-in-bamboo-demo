@@ -191,7 +191,7 @@
   .mcard-sub{font-size:14.5px;font-weight:600;letter-spacing:.22em;opacity:.85}
   .mcard-bottom{
     background:#fff;color:var(--ink);
-    display:flex;align-items:flex-start;justify-content:center;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
     padding:20px 24px 26px;
   }
   @media (max-width:380px){
@@ -249,18 +249,28 @@
   .gcard-big{font-size:31px;font-weight:700;letter-spacing:.01em}
   .gcard-stars{color:#FBBC05;font-size:21px;letter-spacing:3px;margin-top:5px;line-height:1}
   .gcard-bottom{
-    display:flex;align-items:flex-start;justify-content:center;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
     padding:20px 24px 26px;
   }
-  .gcard-side{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .gcard-side{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;flex:1;min-width:0}
   .gcard-cap{font-size:14.5px;font-weight:600;color:#33393A;white-space:nowrap}
-  .gcard-qr{width:150px;height:150px}
+  .gcard-qr{width:122px;height:122px}
+  .tap-icon{
+    width:122px;height:122px;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    color:#33393A;
+  }
+  .tap-icon svg{display:block}
+  .card-sep{width:1px;align-self:stretch;background:#E3E7EE;flex:none;margin-top:34px}
   @media (max-width:380px){
     .gcard-top{padding:20px 18px 30px;gap:13px}
     .gcard-g{width:64px;height:64px}
     .gcard-big{font-size:26px}
     .gcard-bottom{padding:18px 16px 22px}
-    .gcard-qr{width:132px;height:132px}
+    .gcard-qr{width:106px;height:106px}
+    .tap-icon{width:106px;height:106px}
+    .tap-icon svg{width:76px;height:76px}
+    .gcard-cap{font-size:13.5px}
   }
 
   /* Footer */
@@ -617,6 +627,11 @@
         </span>
         <span class="mcard-bottom">
           <span class="gcard-side">
+            <span class="gcard-cap">Tap your phone</span>
+            <span class="tap-icon" aria-hidden="true"><svg width="92" height="92" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="26" height="44" rx="5"/><line x1="17" y1="48" x2="25" y2="48"/><circle cx="42" cy="32" r="2.6" fill="currentColor" stroke="none"/><path d="M46.5 24.5a10.6 10.6 0 0 1 0 15"/><path d="M51.5 19.5a17.7 17.7 0 0 1 0 25"/></svg></span>
+          </span>
+          <span class="card-sep" aria-hidden="true"></span>
+          <span class="gcard-side">
             <span class="gcard-cap">Scan QR code</span>
             <img class="gcard-qr" src="images/menu-qr.png" alt="QR code — poora menu kholein" width="1036" height="1036">
           </span>
@@ -644,6 +659,11 @@
           </span>
         </span>
         <span class="gcard-bottom">
+          <span class="gcard-side">
+            <span class="gcard-cap">Tap your phone</span>
+            <span class="tap-icon" aria-hidden="true"><svg width="92" height="92" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="26" height="44" rx="5"/><line x1="17" y1="48" x2="25" y2="48"/><circle cx="42" cy="32" r="2.6" fill="currentColor" stroke="none"/><path d="M46.5 24.5a10.6 10.6 0 0 1 0 15"/><path d="M51.5 19.5a17.7 17.7 0 0 1 0 25"/></svg></span>
+          </span>
+          <span class="card-sep" aria-hidden="true"></span>
           <span class="gcard-side">
             <span class="gcard-cap">Scan QR code</span>
             <img class="gcard-qr" src="images/review-qr.png" alt="QR code — Google par review dein" width="1200" height="1200">
