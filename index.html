@@ -131,6 +131,11 @@
   }
 
   /* Menu */
+  .menu-group{
+    font-family:'Fraunces',serif;font-weight:700;font-size:23px;line-height:1.2;
+    color:var(--bamboo-deep);margin:34px 0 16px;
+  }
+  .menu-group.first{margin-top:0}
   .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .dish{
     background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
@@ -148,8 +153,10 @@
   }
   .tag.plain{background:#E9EFE2;color:var(--bamboo-deep)}
   .dish p{font-size:14.5px;color:#4A5544;flex:1}
+  .dish-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+  .price{font-family:'Fraunces',serif;font-weight:700;font-size:19px;color:var(--bamboo-deep)}
   .dish .order{
-    margin-top:6px;font-weight:700;font-size:14.5px;color:var(--bamboo);
+    font-weight:700;font-size:14.5px;color:var(--bamboo);
     text-decoration:none;display:inline-flex;gap:6px;align-items:center;
   }
   .dish .order:hover{color:var(--bamboo-deep);text-decoration:underline}
@@ -188,6 +195,7 @@
   .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
   footer .fname{font-family:'Fraunces',serif;font-weight:700;font-size:20px}
   footer p{font-size:14px;color:#5A6650;margin-top:4px}
+  footer a{color:var(--bamboo-deep);font-weight:600}
   footer .credit{font-size:12.5px;color:#8A927D;margin-top:18px}
 
   /* Mobile sticky order bar */
@@ -248,12 +256,12 @@
         <div class="hero-facts">
           <span><b>Swarn Nagri</b>, Greater Noida</span>
           <span><b>Delivery</b> only</span>
-          <span>Swiggy par <b>4.1 rated</b></span>
+          <span><b>11 AM – 11 PM</b>, roz khula</span>
         </div>
       </div>
       <div class="hero-photo">
         <div class="frame">
-          <img src="images/biryani-hero.jpg" alt="Dum biryani ki handi, upar se hara dhaniya aur mirch" width="1400" height="1594">
+          <img src="images/hero-biryani.jpg" alt="Banana leaf par bamboo se nikalti biryani, saath me raita aur salan ki katoriyan" width="1049" height="699">
         </div>
         <div class="hero-stamp">Bamboo dum · <b>seedha aapke ghar</b></div>
       </div>
@@ -264,15 +272,15 @@
   <section class="signature">
     <div class="wrap sig-grid">
       <div class="frame">
-        <img src="images/biryani-pot.jpg" alt="Biryani ka bartan, dum ke baad khula hua" width="1400" height="2100" loading="lazy">
+        <img src="images/signature-bamboo.jpg" alt="Bamboo tube se tray par nikalti biryani, saath me restaurant ka apna BIB wala lakdi ka nishan" width="1050" height="700" loading="lazy">
       </div>
       <div>
-        <h2>Bamboo me band, dum par paki hui</h2>
-        <p>Naam hi kahani hai — biryani bamboo ke andar band karke dum par pakti hai. Chawal alag-alag dana, masala andar tak, aur khushboo jo dabba khulte hi pehle aati hai.</p>
+        <h2>Bamboo ke andar pakti hai</h2>
+        <p>Is jagah ki pehchan hi bamboo me paki biryani hai. Restaurant ke apne online menu par BIB Special Veg Bamboo Biryani aur Chicken Hyderabadi Bamboo Biryani bestseller me aati hain.</p>
         <ul class="sig-points">
-          <li><span class="dot">1</span> Lambe dane wala chawal, har bite me poora swaad</li>
-          <li><span class="dot">2</span> Gehre masale, dum ki gravy ke saath</li>
-          <li><span class="dot">3</span> Single se lekar family handi tak ke size</li>
+          <li><span class="dot">1</span> BIB Special Veg Bamboo Biryani — ₹419</li>
+          <li><span class="dot">2</span> Chicken Hyderabadi Bamboo Biryani — ₹419</li>
+          <li><span class="dot">3</span> Timing: roz 11 AM – 11 PM</li>
         </ul>
       </div>
     </div>
@@ -285,81 +293,191 @@
         <h2>Menu</h2>
         <p>Pasand chuno, WhatsApp par bhejo — order seedha kitchen tak jayega.</p>
       </div>
+
+      <h3 class="menu-group first">Biryani</h3>
       <div class="menu-grid">
         <article class="dish">
-          <img src="images/dish-chicken.jpg" alt="Chicken bamboo dum biryani ka bowl, upar chicken leg piece aur bhuna pyaaz" width="800" height="600" loading="lazy">
+          <img src="images/menu-bib-special-veg.jpg" alt="Bamboo se banana leaf par nikalti veg biryani, saath me raita aur salan" width="1049" height="699" loading="lazy">
           <div class="dish-body">
             <div class="dish-top">
-              <h3>Chicken Bamboo Dum Biryani</h3>
+              <h3>BIB Special Veg Bamboo Biryani</h3>
+              <span class="vegdot" title="Veg"></span>
+            </div>
+            <p>Bamboo me paki veg biryani.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹419</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20BIB%20Special%20Veg%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="images/menu-chicken-bamboo.jpg" alt="Bamboo tube se tray par rakhi chicken biryani" width="1050" height="700" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chicken Hyderabadi Bamboo Biryani</h3>
               <span class="vegdot nonveg" title="Non-veg"></span>
             </div>
-            <p>Brand ka signature item — bamboo me dum paki chicken biryani, saath me raita aur mirchi ka salan.</p>
-            <span class="tag ">Signature</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+            <p>Bamboo me paki chicken biryani.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹419</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Hyderabadi%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+            </div>
           </div>
         </article>
         <article class="dish">
-          <img src="images/biryani-pot.jpg" alt="Plate me dum biryani, saath me kheera aur pudina" width="800" height="600" loading="lazy">
+          <img src="images/menu-kolkata-dum.jpg" alt="Kolkata dum chicken aloo biryani ki plate" width="1223" height="816" loading="lazy">
           <div class="dish-body">
             <div class="dish-top">
-              <h3>Mutton Bamboo Dum Biryani</h3>
+              <h3>Kolkata Dum Chicken Aloo Biryani</h3>
               <span class="vegdot nonveg" title="Non-veg"></span>
             </div>
-            <p>Naram mutton ke tukde, gehre masale aur dum ki khushboo — khaas mauqe ke liye khaas biryani.</p>
-            <span class="tag plain">Weekend special</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Mutton%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
-          </div>
-        </article>
-        <article class="dish">
-          <img src="images/dish-handi.jpg" alt="Mitti ki handi me biryani, saath me raita ki katori" width="800" height="600" loading="lazy">
-          <div class="dish-body">
-            <div class="dish-top">
-              <h3>Veg Bamboo Dum Biryani</h3>
-              <span class="vegdot " title="Veg"></span>
+            <p>Kolkata style dum biryani, aloo ke saath — box me serve hoti hai.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹359</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Kolkata%20Dum%20Chicken%20Aloo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
             </div>
-            <p>Mausam ki sabziyon ke saath poora dum wala swaad — halki, khushboodar, pet bhar.</p>
-            <span class="tag plain">Veg</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Bamboo%20Dum%20Biryani%20order%20karni%20hai">Ye order karo →</a>
           </div>
         </article>
         <article class="dish">
-          <img src="images/dish-paneer.jpg" alt="Kadhai me paneer ki sabzi, peeche chawal ka bartan" width="800" height="600" loading="lazy">
+          <img src="images/menu-chicken-hyderabadi.jpg" alt="Chicken Hyderabadi biryani ki plate" width="1054" height="639" loading="lazy">
           <div class="dish-body">
             <div class="dish-top">
-              <h3>Paneer Bamboo Biryani</h3>
-              <span class="vegdot " title="Veg"></span>
-            </div>
-            <p>Malai paneer ke bade tukde, kesar wala chawal aur upar se bhuna pyaaz.</p>
-            <span class="tag plain">Veg</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
-          </div>
-        </article>
-        <article class="dish">
-          <img src="images/dish-egg.jpg" alt="Rice bowl par tala hua anda aur sabziyan" width="800" height="600" loading="lazy">
-          <div class="dish-body">
-            <div class="dish-top">
-              <h3>Egg Bamboo Biryani</h3>
+              <h3>Chicken Hyderabadi Biryani</h3>
               <span class="vegdot nonveg" title="Non-veg"></span>
             </div>
-            <p>Masala anda biryani — roz ke khane ke liye halki jeb, poora swaad.</p>
-            <span class="tag plain">Roz wala khana</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Egg%20Bamboo%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+            <p>Hyderabadi style chicken biryani — box me serve hoti hai.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹319</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Hyderabadi%20Biryani%20order%20karni%20hai">Ye order karo →</a>
+            </div>
           </div>
         </article>
         <article class="dish">
-          <img src="images/biryani-hero.jpg" alt="Do bartano me biryani, safed plate par rakhi hui" width="800" height="600" loading="lazy">
+          <img src="images/menu-leg-piece-bowl.jpg" alt="Mitti ki handi me leg piece biryani, saath me raita" width="1223" height="816" loading="lazy">
           <div class="dish-body">
             <div class="dish-top">
-              <h3>Family Bamboo Handi</h3>
+              <h3>Leg Piece Chicken Biryani Value Bowl</h3>
               <span class="vegdot nonveg" title="Non-veg"></span>
             </div>
-            <p>3–4 logo ke liye badi handi — ghar ki daawat ho ya doston ki mehfil, ek handi kaafi hai.</p>
-            <span class="tag ">Family pack</span>
-            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Family%20Bamboo%20Handi%20order%20karni%20hai">Ye order karo →</a>
+            <p>Leg piece biryani — 500 ml box, ek ke liye.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹279</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Leg%20Piece%20Chicken%20Biryani%20Value%20Bowl%20order%20karna%20hai">Ye order karo →</a>
+            </div>
           </div>
         </article>
       </div>
-      <p class="menu-note">Ye sample menu hai — asli items, prices aur offers aapke asal menu se update ho jayenge.</p>
+
+      <h3 class="menu-group">Starters</h3>
+      <div class="menu-grid">
+        <article class="dish">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chicken Wings</h3>
+              <span class="vegdot nonveg" title="Non-veg"></span>
+            </div>
+            <p>Starter plate.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹99</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Wings%20order%20karne%20hain">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Aloo 65</h3>
+              <span class="vegdot" title="Veg"></span>
+            </div>
+            <p>300 ml ki plate.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹159</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Aloo%2065%20order%20karna%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="images/menu-chicken-65.jpg" alt="Chicken 65 ki plate" width="1052" height="701" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chicken 65</h3>
+              <span class="vegdot nonveg" title="Non-veg"></span>
+            </div>
+            <p>Andhra style starter plate.</p>
+            <div class="dish-foot">
+              <span class="price">₹319</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%2065%20order%20karna%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="menu-group">Curry, roti aur meetha</h3>
+      <div class="menu-grid">
+        <article class="dish">
+          <img src="images/menu-chicken-lababdar.jpg" alt="Chicken Lababdar ki plate" width="1054" height="703" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chicken Lababdar</h3>
+              <span class="vegdot nonveg" title="Non-veg"></span>
+            </div>
+            <p>Full plate curry.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹499</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Lababdar%20order%20karna%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Rumali Roti</h3>
+            </div>
+            <p>2 piece.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹39</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Rumali%20Roti%20order%20karni%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="images/menu-shahi-tukda.jpg" alt="Shahi Tukda dessert ki plate" width="1056" height="704" loading="lazy">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Shahi Tukda</h3>
+            </div>
+            <p>Dessert.</p>
+            <div class="dish-foot">
+              <span class="price">₹69</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Shahi%20Tukda%20order%20karna%20hai">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Gulab Jamun</h3>
+            </div>
+            <p>2 piece.</p>
+            <span class="tag">Bestseller</span>
+            <div class="dish-foot">
+              <span class="price">₹79</span>
+              <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Gulab%20Jamun%20order%20karne%20hain">Ye order karo →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-note">Ye menu aur iske prices restaurant ki apni online listing se liye gaye hain — listing par badlaav ho to wahi naye prices lagenge.</p>
     </div>
   </section>
 
@@ -373,7 +491,7 @@
         <div class="step">
           <div class="num">1</div>
           <h3>Menu se chuno</h3>
-          <p>Upar menu dekho aur apni biryani pasand karo — koi app download nahi, koi sign-up nahi.</p>
+          <p>Upar menu dekho aur apni pasand chuno — koi app download nahi, koi sign-up nahi.</p>
         </div>
         <div class="step">
           <div class="num">2</div>
@@ -382,8 +500,8 @@
         </div>
         <div class="step">
           <div class="num">3</div>
-          <h3>Garam delivery</h3>
-          <p>Swarn Nagri aur aas-paas ke ilaakon me garam-garam biryani seedha aapke darwaze par.</p>
+          <h3>Ghar tak delivery</h3>
+          <p>Order confirm hote hi khana banta hai aur delivery ke liye nikal padta hai.</p>
         </div>
       </div>
     </div>
@@ -399,7 +517,7 @@
         </div>
         <div class="cta-box">
           <a class="btn" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">Abhi WhatsApp par order karo</a>
-          <small>Subah se raat tak · Delivery only</small>
+          <small>Roz 11 AM – 11 PM · Delivery only</small>
         </div>
       </div>
     </div>
@@ -411,14 +529,16 @@
     <div class="foot-in">
       <div>
         <div class="fname">Biryani in Bamboo</div>
-        <p>Swarn Nagri, Greater Noida · Delivery only</p>
+        <p>MV-20A, Swarn Nagri, Surajpur Site 4, Greater Noida – 201310 · Delivery only</p>
+        <p>Roz 11 AM – 11 PM</p>
         <p>Trishala Foods Pvt. Ltd.</p>
+        <p><a href="https://review-cards-umber.vercel.app/go/A1">Google par review dein</a></p>
       </div>
       <div>
         <a class="btn ghost small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par baat karo</a>
       </div>
     </div>
-    <p class="credit">Food photos: Unsplash (sample). Ye ek demo page hai — order aur baaki jaankari WhatsApp par confirm hoti hai.</p>
+    <p class="credit">Photos aur menu restaurant ki apni public online listing se liye gaye hain — menu aur prices listing par badal sakte hain. Ye ek demo page hai — order aur baaki jaankari WhatsApp par confirm hoti hai.</p>
   </div>
 </footer>
 
