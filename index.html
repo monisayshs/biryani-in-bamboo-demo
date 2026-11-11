@@ -190,6 +190,49 @@
   .direct .cta-box .btn{width:100%;justify-content:center;font-size:16.5px;padding:15px 22px}
   .direct .cta-box small{display:block;margin-top:10px;font-size:13px;color:#6B5A36;text-align:center}
 
+  /* Review card */
+  .review{background:var(--paper);border-top:1px solid var(--line)}
+  .review .section-head{margin-left:auto;margin-right:auto;text-align:center}
+  .review-line{max-width:52ch;margin:26px auto 0;text-align:center;color:#3B4636;font-size:16.5px}
+  .gcard{
+    display:block;text-decoration:none;color:var(--ink);
+    width:min(340px,100%);margin:0 auto;background:#fff;
+    border:1px solid #E3E7EE;border-radius:22px;overflow:hidden;
+    box-shadow:0 18px 44px rgba(33,43,30,.18),0 3px 10px rgba(33,43,30,.10);
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .gcard:hover{transform:translateY(-3px);box-shadow:0 24px 52px rgba(33,43,30,.22),0 3px 10px rgba(33,43,30,.10)}
+  .gcard-top{
+    background:#1a56c4;color:#fff;
+    display:flex;align-items:center;gap:16px;
+    padding:24px 24px 34px;
+    border-bottom-left-radius:50% 20px;border-bottom-right-radius:50% 20px;
+  }
+  .gcard-g{
+    width:76px;height:76px;border-radius:50%;background:#fff;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 8px rgba(10,30,80,.25);
+  }
+  .gcard-title{display:flex;flex-direction:column;line-height:1.1}
+  .gcard-small{font-size:17px;font-weight:500;opacity:.92}
+  .gcard-big{font-size:31px;font-weight:700;letter-spacing:.01em}
+  .gcard-stars{color:#FBBC05;font-size:21px;letter-spacing:3px;margin-top:5px;line-height:1}
+  .gcard-bottom{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:8px;
+    padding:20px 24px 26px;
+  }
+  .gcard-side{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .gcard-cap{font-size:14.5px;font-weight:600;color:#33393A;white-space:nowrap}
+  .gcard-qr{width:96px;height:96px}
+  .gcard-or{align-self:center;font-size:15px;color:#5A6650;padding-top:18px}
+  @media (max-width:380px){
+    .gcard-top{padding:20px 18px 30px;gap:13px}
+    .gcard-g{width:64px;height:64px}
+    .gcard-big{font-size:26px}
+    .gcard-bottom{padding:18px 16px 22px}
+    .gcard-qr{width:84px;height:84px}
+  }
+
   /* Footer */
   footer{padding:38px 0 110px;border-top:1px solid var(--line)}
   .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
@@ -520,6 +563,45 @@
           <small>Roz 11 AM – 11 PM · Delivery only</small>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- REVIEW CARD -->
+  <section class="review">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Google par review dein</h2>
+      </div>
+      <a class="gcard" href="https://www.google.com/maps/search/?api=1&query=Biryani+In+Bamboo+Swarn+Nagri+Greater+Noida" aria-label="Google par Biryani in Bamboo ki listing kholo aur review dein">
+        <span class="gcard-top">
+          <span class="gcard-g" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34.3 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34.3 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
+          </span>
+          <span class="gcard-title">
+            <span class="gcard-small">review us</span>
+            <span class="gcard-big">on Google</span>
+            <span class="gcard-stars" aria-hidden="true">★★★★★</span>
+          </span>
+        </span>
+        <span class="gcard-bottom">
+          <span class="gcard-side">
+            <span class="gcard-cap">Tap your phone</span>
+            <svg width="92" height="72" viewBox="0 0 96 72" fill="none" stroke="#212B1E" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+              <path d="M12 20a30 30 0 0 0 0 32"/>
+              <path d="M23 26a20 20 0 0 0 0 20"/>
+              <path d="M34 32a10 10 0 0 0 0 8"/>
+              <rect x="52" y="6" width="32" height="52" rx="6"/>
+              <path d="M46 62c6 2 10 2 14 0l6-4"/>
+            </svg>
+          </span>
+          <span class="gcard-or">or</span>
+          <span class="gcard-side">
+            <span class="gcard-cap">Scan QR code</span>
+            <img class="gcard-qr" src="images/review-qr.png" alt="QR code — Biryani in Bamboo ki Google listing" width="630" height="630">
+          </span>
+        </span>
+      </a>
+      <p class="review-line">Khana pasand aaya? Ek review de dein — aapke ek review se naye customers tak hamari biryani pahunchti hai.</p>
     </div>
   </section>
 </main>
