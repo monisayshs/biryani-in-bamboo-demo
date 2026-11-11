@@ -67,6 +67,17 @@
   .btn.ghost:hover{background:var(--saffron-soft)}
   .btn.small{padding:9px 16px;font-size:14px}
 
+  /* Top nav */
+  .nav-row{border-top:1px solid var(--line)}
+  .site-nav{display:flex;gap:8px;padding:8px 0 10px;overflow-x:auto;scrollbar-width:none}
+  .site-nav::-webkit-scrollbar{display:none}
+  .site-nav a{
+    flex:none;text-decoration:none;font-weight:600;font-size:14px;color:var(--bamboo-deep);
+    padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);
+  }
+  .site-nav a:hover{background:var(--saffron-soft)}
+  .site-nav a.active{background:var(--saffron-soft);border-color:var(--saffron);color:#8A4E08;font-weight:700}
+
   /* Hero */
   .hero{padding:44px 0 52px;position:relative}
   .hero::before{
@@ -322,6 +333,13 @@
       </span>
     </a>
     <a class="btn small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">Order on WhatsApp</a>
+  </div>
+  <div class="wrap nav-row">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJxfQ00rnBDDkRF-QX0_dpeSc">Review dein ⭐</a>
+    </nav>
   </div>
 </header>
 
