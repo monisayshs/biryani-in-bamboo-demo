@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poora Menu — Biryani in Bamboo | Swarn Nagri, Greater Noida</title>
+<meta name="description" content="Biryani in Bamboo ka poora menu — saari biryani, starters, main course, chinese aur desserts, apne rates ke saath. WhatsApp par direct order karo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4E6; --paper:#FFFDF7; --ink:#212B1E;
+    --bamboo:#38612F; --bamboo-deep:#274A21; --leaf:#5C7A4E;
+    --saffron:#D97C1C; --saffron-soft:#F6E3C2; --line:#E4D9BE; --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip}
+  body{font-family:'Archivo',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:20;background:rgba(250,244,230,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand-mark{width:38px;height:38px;border-radius:50%;flex:none;background:var(--bamboo);color:#FFF7E6;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:19px}
+  .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1.1}
+  .brand-sub{font-size:11.5px;color:var(--leaf);font-weight:600;letter-spacing:.04em}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--bamboo);color:#FFF8EA;text-decoration:none;font-weight:600;font-size:15.5px;padding:12px 22px;border-radius:var(--radius);border:2px solid var(--bamboo);transition:background .15s ease,transform .15s ease}
+  .btn:hover{background:var(--bamboo-deep)}
+  .btn:active{transform:scale(.98)}
+  .btn.saffron{background:var(--saffron);border-color:var(--saffron);color:#2A1A05}
+  .btn.saffron:hover{background:#C56E14}
+  .btn.ghost{background:transparent;color:var(--bamboo-deep);border-color:var(--bamboo)}
+  .btn.ghost:hover{background:var(--saffron-soft)}
+  .btn.small{padding:9px 16px;font-size:14px}
+  section{padding:40px 0 56px}
+  .page-head{padding:40px 0 6px}
+  .page-head h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.1}
+  .page-head p{margin-top:12px;font-size:17px;color:#3B4636;max-width:56ch}
+  .back-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:700;color:var(--bamboo);text-decoration:none}
+  .back-link:hover{color:var(--bamboo-deep);text-decoration:underline}
+  .menu-group{font-family:'Fraunces',serif;font-weight:700;font-size:23px;line-height:1.2;color:var(--bamboo-deep);margin:34px 0 14px}
+  .menu-group.first{margin-top:10px}
+  .menu-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .mrow{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:14px}
+  .mrow-img{width:64px;height:64px;border-radius:10px;object-fit:cover;flex:none}
+  .mrow-main{flex:1;display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+  .mrow-main h3{font-family:'Fraunces',serif;font-size:17.5px;font-weight:700;line-height:1.25}
+  .tag{flex:none;font-size:11px;font-weight:700;letter-spacing:.05em;padding:4px 9px;border-radius:999px;background:var(--saffron-soft);color:#8A4E08}
+  .mrow-side{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none}
+  .price{font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:var(--bamboo-deep)}
+  .order{font-weight:700;font-size:13.5px;color:var(--bamboo);text-decoration:none;white-space:nowrap}
+  .order:hover{color:var(--bamboo-deep);text-decoration:underline}
+  .menu-note{margin-top:22px;font-size:13.5px;color:#6B7563}
+  footer{padding:38px 0 110px;border-top:1px solid var(--line)}
+  .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  footer .fname{font-family:'Fraunces',serif;font-weight:700;font-size:20px}
+  footer p{font-size:14px;color:#5A6650;margin-top:4px}
+  footer a{color:var(--bamboo-deep);font-weight:600}
+  footer .credit{font-size:12.5px;color:#8A927D;margin-top:18px}
+  .sticky-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+  .sticky-bar .btn{width:100%;justify-content:center}
+  @media (max-width:860px){
+    .menu-list{grid-template-columns:1fr}
+    section{padding:30px 0 42px}
+    .sticky-bar{display:block}
+    .header-in .btn{display:none}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">B</span>
+      <span>
+        <span class="brand-name">Biryani in Bamboo</span><br>
+        <span class="brand-sub">SWARN NAGRI · GREATER NOIDA</span>
+      </span>
+    </a>
+    <a class="btn small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">Order on WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <h1>Poora Menu</h1>
+    <p>Biryani in Bamboo ki saari dishes ek jagah — pasand chuno aur seedha WhatsApp par order bhejo. Roz 11 AM – 11 PM, delivery only.</p>
+    <a class="back-link" href="index.html">← Homepage par wapas</a>
+  </div>
+
+  <section>
+    <div class="wrap">
+
+      <h2 class="menu-group first">Biryani</h2>
+      <div class="menu-list">
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Basmati Biryani Rice</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹199</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Basmati%20Biryani%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-leg-piece-bowl.jpg" alt="Leg Piece Chicken Biryani Value Bowl ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Leg Piece Chicken Biryani Value Bowl</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹279</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Leg%20Piece%20Chicken%20Biryani%20Value%20Bowl%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-chicken-hyderabadi.jpg" alt="Chicken Hyderabadi Biryani ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Chicken Hyderabadi Biryani</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Hyderabadi%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Lucknowi Chicken Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Lucknowi%20Chicken%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Special Chicken 65 Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Special%20Chicken%2065%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Paneer 65 Hyderabadi Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%2065%20Hyderabadi%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Pepper Paneer Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Pepper%20Paneer%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Pepper Mushroom Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Pepper%20Mushroom%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Lollipop Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹349</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Lollipop%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Fry Piece Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹349</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Fry%20Piece%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-kolkata-dum.jpg" alt="Kolkata Dum Chicken Aloo Biryani ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Kolkata Dum Chicken Aloo Biryani</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹359</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Kolkata%20Dum%20Chicken%20Aloo%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Hyderabadi Biryani</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹359</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Hyderabadi%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-bib-special-veg.jpg" alt="BIB Special Veg Bamboo Biryani ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>BIB Special Veg Bamboo Biryani</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹419</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20BIB%20Special%20Veg%20Bamboo%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chef Special Paneer Veggies Bamboo Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹419</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chef%20Special%20Paneer%20Veggies%20Bamboo%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-chicken-bamboo.jpg" alt="Chicken Hyderabadi Bamboo Biryani ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Chicken Hyderabadi Bamboo Biryani</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹419</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Hyderabadi%20Bamboo%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Special Chicken Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Special%20Chicken%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Special Chicken Hyderabadi Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Special%20Chicken%20Hyderabadi%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Butter Chicken Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Butter%20Chicken%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Pepper Chicken Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Pepper%20Chicken%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Keema Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Keema%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken 65 Hyderabadi Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%2065%20Hyderabadi%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Paneer Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Leg Piece Chicken Biryani Big Bowl</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Leg%20Piece%20Chicken%20Biryani%20Big%20Bowl%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Special Fish Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Special%20Fish%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chef Special Fish Bamboo Biryani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chef%20Special%20Fish%20Bamboo%20Biryani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="menu-group">Starters</h2>
+      <div class="menu-list">
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Wings</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹99</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Wings%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Aloo 65</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹159</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Aloo%2065%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Egg 65</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹159</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Egg%2065%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Paneer 65</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%2065%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Andhra Chicken Fry</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Andhra%20Chicken%20Fry%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-chicken-65.jpg" alt="Chicken 65 ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Chicken 65</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%2065%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Dry Roast</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Dry%20Roast%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chilli Chicken Dry</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chilli%20Chicken%20Dry%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Lemon Chicken</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Lemon%20Chicken%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Manchurian</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Manchurian%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Lollypop</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Lollypop%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chilli Fish</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹349</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chilli%20Fish%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Andhra Fish Fry</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹349</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Andhra%20Fish%20Fry%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chilli Paneer</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹359</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chilli%20Paneer%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="menu-group">Main course</h2>
+      <div class="menu-list">
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Egg Curry</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹359</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Egg%20Curry%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Kadhai Paneer</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹409</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Kadhai%20Paneer%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Paneer Butter Masala</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹409</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%20Butter%20Masala%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Dal Makhani</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹419</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Dal%20Makhani%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Dal Dhaba</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹419</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Dal%20Dhaba%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Chettinadu</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹429</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Chettinadu%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Paneer Lababdar</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹459</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Paneer%20Lababdar%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-chicken-lababdar.jpg" alt="Chicken Lababdar ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Chicken Lababdar</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹499</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Lababdar%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Korma</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹499</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Korma%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="menu-group">Chinese & rice</h2>
+      <div class="menu-list">
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Fried Rice</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Fried%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Hakka Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Hakka%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Chilli Garlic Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Chilli%20Garlic%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Singapore Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Singapore%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Fried Rice</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Fried%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Hakka Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Hakka%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Singapore Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Singapore%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Jeera Rice</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Jeera%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Matar Pulao</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹319</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Matar%20Pulao%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Chilli Garlic Noodles</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Chilli%20Garlic%20Noodles%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Chicken Schezwan Fried Rice</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Chicken%20Schezwan%20Fried%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Veg Schezwan Fried Rice</h3>
+            
+          </div>
+          <div class="mrow-side">
+            
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Veg%20Schezwan%20Fried%20Rice%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="menu-group">Bread & desserts</h2>
+      <div class="menu-list">
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Rumali Roti (2 pc)</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹39</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Rumali%20Roti%20%282%20pc%29%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          <img class="mrow-img" src="images/menu-shahi-tukda.jpg" alt="Shahi Tukda ki asal photo" loading="lazy">
+          <div class="mrow-main">
+            <h3>Shahi Tukda</h3>
+            
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹69</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Shahi%20Tukda%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+        <article class="mrow">
+          
+          <div class="mrow-main">
+            <h3>Gulab Jamun (2 pc)</h3>
+            <span class="tag">Bestseller</span>
+          </div>
+          <div class="mrow-side">
+            <span class="price">₹79</span>
+            <a class="order" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Gulab%20Jamun%20%282%20pc%29%20order%20karna%20hai">Order karo →</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-note">Ye menu aur iske prices restaurant ki apni online listing se liye gaye hain — listing par badlaav ho to wahi naye prices lagenge. Kuch dishes ke rates listing par saaf nahi dikhe, isliye woh bina rate ke diye gaye hain — unka rate order ke waqt WhatsApp par confirm ho jayega.</p>
+      <a class="back-link" href="index.html">← Homepage par wapas</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="fname">Biryani in Bamboo</div>
+        <p>MV-20A, Swarn Nagri, Surajpur Site 4, Greater Noida – 201310 · Delivery only</p>
+        <p>Roz 11 AM – 11 PM</p>
+        <p>Trishala Foods Pvt. Ltd.</p>
+        <p><a href="https://search.google.com/local/writereview?placeid=ChIJxfQ00rnBDDkRF-QX0_dpeSc">Google par review dein</a></p>
+      </div>
+      <div>
+        <a class="btn ghost small" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par baat karo</a>
+      </div>
+    </div>
+    <p class="credit">Photos aur menu restaurant ki apni public online listing se liye gaye hain — menu aur prices listing par badal sakte hain. Ye ek demo page hai — order aur baaki jaankari WhatsApp par confirm hoti hai.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn saffron" href="https://wa.me/917247857463?text=Hi%2C%20mujhe%20Biryani%20in%20Bamboo%20se%20order%20karna%20hai">WhatsApp par order karo</a>
+</div>
+
+</body>
+</html>

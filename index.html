@@ -168,6 +168,37 @@
   .vegdot.nonveg{border-color:#9C3B2E}
   .vegdot.nonveg::after{background:#9C3B2E}
   .menu-note{margin-top:18px;font-size:13.5px;color:#6B7563}
+  .menu-more{margin-top:22px}
+
+  /* Menu card */
+  .menucard-sec{background:var(--cream);border-top:1px solid var(--line)}
+  .menucard-sec .section-head{margin-left:auto;margin-right:auto;text-align:center}
+  .menucard-line{max-width:52ch;margin:26px auto 0;text-align:center;color:#3B4636;font-size:16.5px}
+  .mcard{
+    display:block;text-decoration:none;color:#fff;
+    width:min(340px,100%);margin:0 auto;background:#15181D;
+    border:1px solid #2A2E35;border-radius:22px;overflow:hidden;
+    box-shadow:0 18px 44px rgba(33,43,30,.18),0 3px 10px rgba(33,43,30,.10);
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .mcard:hover{transform:translateY(-3px);box-shadow:0 24px 52px rgba(33,43,30,.22),0 3px 10px rgba(33,43,30,.10)}
+  .mcard-top{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    padding:30px 24px 26px;gap:4px;
+  }
+  .mcard-icon{font-size:44px;line-height:1.1}
+  .mcard-title{font-family:'Fraunces',serif;font-size:42px;font-weight:700;letter-spacing:.14em;line-height:1.1}
+  .mcard-sub{font-size:14.5px;font-weight:600;letter-spacing:.22em;opacity:.85}
+  .mcard-bottom{
+    background:#fff;color:var(--ink);
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:20px 24px 26px;
+  }
+  @media (max-width:380px){
+    .mcard-top{padding:24px 18px 22px}
+    .mcard-title{font-size:36px}
+    .mcard-bottom{padding:18px 16px 22px}
+  }
 
   /* Steps */
   .steps{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -520,6 +551,9 @@
       </div>
 
       <p class="menu-note">Ye menu aur iske prices restaurant ki apni online listing se liye gaye hain — listing par badlaav ho to wahi naye prices lagenge.</p>
+      <div class="menu-more">
+        <a class="btn saffron" href="menu.html">Poora Menu dekhein →</a>
+      </div>
     </div>
   </section>
 
@@ -562,6 +596,29 @@
           <small>Roz 11 AM – 11 PM · Delivery only</small>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- MENU CARD -->
+  <section class="menucard-sec">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Menu card</h2>
+      </div>
+      <a class="mcard" href="menu.html" aria-label="Biryani in Bamboo ka poora menu kholein">
+        <span class="mcard-top">
+          <span class="mcard-icon" aria-hidden="true">🍴</span>
+          <span class="mcard-title">MENU</span>
+          <span class="mcard-sub">VIEW OUR MENU ONLINE</span>
+        </span>
+        <span class="mcard-bottom">
+          <span class="gcard-side">
+            <span class="gcard-cap">Scan QR code</span>
+            <img class="gcard-qr" src="images/menu-qr.png" alt="QR code — poora menu kholein" width="1036" height="1036">
+          </span>
+        </span>
+      </a>
+      <p class="menucard-line">Counter par rakhe is card ka QR scan karo — poora menu phone par khul jayega, saari dishes aur rates ke saath.</p>
     </div>
   </section>
 
